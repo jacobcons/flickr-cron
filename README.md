@@ -107,9 +107,9 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `hello-world/tests` folder in this project. Use NPM to install the [Mocha test framework](https://mochajs.org/) and run unit tests.
 
 ```bash
-flickr-cron$ cd hello-world
-hello-world$ npm install
-hello-world$ npm run test
+flickr-cron$ cd flickr-cron
+flickr-cron$ npm install
+flickr-cron$ npm run test
 ```
 
 ## Cleanup
