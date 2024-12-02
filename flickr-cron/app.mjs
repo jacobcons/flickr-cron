@@ -11,7 +11,10 @@ const client = new S3Client({
 })
 
 export const lambdaHandler = async (event, context) => {
-  const date = '2015-01-01'
+  // get most interesting flickr images from yesterday
+  let date = new Date()
+  date.setDate(date.getDate() - 1)
+  date = date.toLocaleDateString('en-CA')
   const res = await fetch(`https://api.flickr.com/services/rest?method=flickr.interestingness.getList&date=${date}&api_key=${process.env.FLICKR_API_KEY}`)
   const xml = await res.text()
   const json = parser.parse(xml)
